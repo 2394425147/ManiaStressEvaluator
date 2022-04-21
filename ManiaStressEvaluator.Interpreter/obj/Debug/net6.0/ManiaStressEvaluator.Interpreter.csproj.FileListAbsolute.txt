@@ -1,0 +1,12 @@
+D:\360MoveData\Users\rdcny\source\repos\ManiaStressEvaluator\ManiaStressEvaluator.Interpreter\bin\Debug\net6.0\ManiaStressEvaluator.Interpreter.deps.json
+D:\360MoveData\Users\rdcny\source\repos\ManiaStressEvaluator\ManiaStressEvaluator.Interpreter\bin\Debug\net6.0\ManiaStressEvaluator.Interpreter.dll
+D:\360MoveData\Users\rdcny\source\repos\ManiaStressEvaluator\ManiaStressEvaluator.Interpreter\bin\Debug\net6.0\ManiaStressEvaluator.Interpreter.pdb
+D:\360MoveData\Users\rdcny\source\repos\ManiaStressEvaluator\ManiaStressEvaluator.Interpreter\obj\Debug\net6.0\ManiaStressEvaluator.Interpreter.csproj.AssemblyReference.cache
+D:\360MoveData\Users\rdcny\source\repos\ManiaStressEvaluator\ManiaStressEvaluator.Interpreter\obj\Debug\net6.0\ManiaStressEvaluator.Interpreter.GeneratedMSBuildEditorConfig.editorconfig
+D:\360MoveData\Users\rdcny\source\repos\ManiaStressEvaluator\ManiaStressEvaluator.Interpreter\obj\Debug\net6.0\ManiaStressEvaluator.Interpreter.AssemblyInfoInputs.cache
+D:\360MoveData\Users\rdcny\source\repos\ManiaStressEvaluator\ManiaStressEvaluator.Interpreter\obj\Debug\net6.0\ManiaStressEvaluator.Interpreter.AssemblyInfo.cs
+D:\360MoveData\Users\rdcny\source\repos\ManiaStressEvaluator\ManiaStressEvaluator.Interpreter\obj\Debug\net6.0\ManiaStressEvaluator.Interpreter.csproj.CoreCompileInputs.cache
+D:\360MoveData\Users\rdcny\source\repos\ManiaStressEvaluator\ManiaStressEvaluator.Interpreter\obj\Debug\net6.0\ManiaStressEvaluator.Interpreter.dll
+D:\360MoveData\Users\rdcny\source\repos\ManiaStressEvaluator\ManiaStressEvaluator.Interpreter\obj\Debug\net6.0\refint\ManiaStressEvaluator.Interpreter.dll
+D:\360MoveData\Users\rdcny\source\repos\ManiaStressEvaluator\ManiaStressEvaluator.Interpreter\obj\Debug\net6.0\ManiaStressEvaluator.Interpreter.pdb
+D:\360MoveData\Users\rdcny\source\repos\ManiaStressEvaluator\ManiaStressEvaluator.Interpreter\obj\Debug\net6.0\ref\ManiaStressEvaluator.Interpreter.dll
