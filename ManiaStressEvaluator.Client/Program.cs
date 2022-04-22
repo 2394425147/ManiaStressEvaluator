@@ -10,14 +10,14 @@ public static class Program
         while (args.Length < 1)
         {
             Console.WriteLine("Please enter the path to the beatmap. (.osu)");
-            args = new []{ Console.ReadLine() };
+            args = new[] { Console.ReadLine() };
         }
-        
+
         var rawChart = await File.ReadAllTextAsync(args[0] ?? throw new InvalidOperationException());
         var chart = OsuManiaInterpreter.Parse(rawChart);
-        
-        
-        await new AheadOfTimeEvaluator().Evaluate(chart);
+
+
+        await new RealtimeEvaluator().Evaluate(chart);
 
         Console.ReadKey();
     }

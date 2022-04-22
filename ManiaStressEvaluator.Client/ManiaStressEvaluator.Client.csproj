@@ -8,7 +8,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\ManiaStressEvaluator.Interpreter\ManiaStressEvaluator.Interpreter.csproj" />
+        <ProjectReference Include="..\ManiaStressEvaluator.Interpreter\ManiaStressEvaluator.Interpreter.csproj"/>
     </ItemGroup>
 
 </Project>

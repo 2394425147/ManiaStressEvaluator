@@ -7,43 +7,40 @@ public class AheadOfTimeEvaluator : IEvaluator
 {
     public Task Evaluate(Chart chart)
     {
-        var noteCopy = chart.Notes.OrderBy(n => n.Time).ToList();
+        var noteCopy = chart.AsNoteCollections();
 
         var player = new Human();
         var notesHit = 0;
         var totalStress = 0f;
 
-        foreach (var note in noteCopy)
+        foreach (var noteCollection in noteCopy)
         {
             notesHit++;
-                
-            player.Arms[note.Lane / 2].Wrist.Fingers[note.Lane % 2].React(note);
 
-            var averageStress = (player.Arms[0].Wrist.Fingers[0].Stress +
-                                 player.Arms[0].Wrist.Fingers[1].Stress +
-                                 player.Arms[1].Wrist.Fingers[0].Stress +
-                                 player.Arms[1].Wrist.Fingers[1].Stress) / 4f;
-                
-            totalStress += averageStress * 3.5f;
+            player.React(noteCollection);
+
+            var averageStress = player.GetAccumulativeStress();
+
+            totalStress += averageStress;
 
             Console.ForegroundColor = averageStress switch
             {
-                > 1.9f => ConsoleColor.Red,
-                > 1.4f => ConsoleColor.Yellow,
-                > 0.8f => ConsoleColor.White,
-                _ => ConsoleColor.Blue,
+                > 5.3f => ConsoleColor.Red,
+                > 3.3f => ConsoleColor.Yellow,
+                > 1.7f => ConsoleColor.White,
+                _ => ConsoleColor.Blue
             };
-            
-            Console.Write($"{player.Arms[0].Wrist.Fingers[0].Stress:00.00}\t" +
-                          $"{player.Arms[0].Wrist.Fingers[1].Stress:00.00}\t" +
-                          $"{player.Arms[1].Wrist.Fingers[0].Stress:00.00}\t" +
-                          $"{player.Arms[1].Wrist.Fingers[1].Stress:00.00}\t||\t" +
-                          $"AVG: {averageStress * 3.5f:0.00}*\tTTL: {totalStress / notesHit * 1.5f:0.00}*\t||\t");
 
-
-            Console.WriteLine(note.isHold
-                ? $"{note.Time:0.000}\t[{note.Length:0.00}]"
-                : $"{note.Time}");
+            Console.WriteLine($"BDY: {player.Stress:0.0}\t|\t" +
+                              $"RM0: {player.Arms[0].Stress:0.0}\t" +
+                              $"RST: {player.Arms[0].Wrist.Stress:0.0}\t" +
+                              $"FGR: {player.Arms[0].Wrist.Fingers[0].Stress:0.0} " +
+                              $"{player.Arms[0].Wrist.Fingers[1].Stress:0.0}\t|\t" +
+                              $"RM1: {player.Arms[1].Stress:0.0}\t" +
+                              $"RST: {player.Arms[1].Wrist.Stress:0.0}\t" +
+                              $"FGR: {player.Arms[1].Wrist.Fingers[0].Stress:0.0} " +
+                              $"{player.Arms[1].Wrist.Fingers[1].Stress:0.0}\t||\t" +
+                              $"FRM: {averageStress:0.00}*\tAVG: {totalStress / notesHit * 1.7f:0.000}*");
         }
 
         return Task.CompletedTask;

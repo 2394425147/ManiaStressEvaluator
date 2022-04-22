@@ -2,6 +2,8 @@
 
 public abstract class MuscleBase
 {
+    protected float LastHitTime;
     public float Stress;
-    public float LastHitTime;
+
+    public abstract float GetAccumulativeStress();
 }

@@ -2,8 +2,8 @@
 
 public class Chart
 {
-    public List<TempoSection> TempoSections = new();
     public List<Note> Notes = new();
+    public List<TempoSection> TempoSections = new();
 
     /// <summary>
     ///     This game calculates position based on BPS.
@@ -32,13 +32,28 @@ public class Chart
 
         return position * scale;
     }
+
+    public List<NoteCollection> AsNoteCollections()
+    {
+        var notes = Notes.OrderBy(n => n.Time).ToList();
+        var returnList = new List<NoteCollection>();
+
+        foreach (var t in notes)
+        {
+            if (returnList.Count < 1 || t.Time > returnList[^1].Time) returnList.Add(new NoteCollection(t.Time));
+
+            returnList[^1].Add(t);
+        }
+
+        return returnList;
+    }
 }
 
 public class TempoSection
 {
     public float Bpm;
-    public float Time;
     public float Multiplier;
+    public float Time;
 
     public static float BeatPerSecond(float bpm)
     {

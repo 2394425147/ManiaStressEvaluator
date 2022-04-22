@@ -2,9 +2,8 @@
 
 public class Note
 {
-    public float Time;
-    public int Lane;
-
     public bool isHold;
+    public int Lane;
     public float Length = 0;
+    public float Time;
 }
