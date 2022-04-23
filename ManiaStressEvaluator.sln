@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManiaStressEvaluator.Interp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManiaStressEvaluator.Client", "ManiaStressEvaluator.Client\ManiaStressEvaluator.Client.csproj", "{3086D26B-FA81-44F7-AE75-C0A1268DF821}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManiaStressEvaluator.Graph", "ManiaStressEvaluator.Graph\ManiaStressEvaluator.Graph.csproj", "{2BE3579E-42F4-4BC5-BFAE-A09B7CE70B56}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{3086D26B-FA81-44F7-AE75-C0A1268DF821}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3086D26B-FA81-44F7-AE75-C0A1268DF821}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3086D26B-FA81-44F7-AE75-C0A1268DF821}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BE3579E-42F4-4BC5-BFAE-A09B7CE70B56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BE3579E-42F4-4BC5-BFAE-A09B7CE70B56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BE3579E-42F4-4BC5-BFAE-A09B7CE70B56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BE3579E-42F4-4BC5-BFAE-A09B7CE70B56}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

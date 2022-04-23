@@ -26,7 +26,6 @@ public static class Program
         var rawChart = await File.ReadAllTextAsync(args[0] ?? throw new InvalidOperationException());
         var chart = OsuManiaInterpreter.Parse(rawChart);
 
-
         await new RealtimeEvaluator().Evaluate(chart);
 
         Console.ReadKey();

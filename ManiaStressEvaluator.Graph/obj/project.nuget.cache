@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "93UITK/z0/uTmM05aXM91RQmFc7d2PSbdSLLioqoIoI1Ub/R5q31JYVtMI7k3vetdNY27GjKFhdgK8nm1SJD/Q==",
+  "success": true,
+  "projectFilePath": "D:\\360MoveData\\Users\\rdcny\\source\\repos\\ManiaStressEvaluator\\ManiaStressEvaluator.Graph\\ManiaStressEvaluator.Graph.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\RDCNY\\.nuget\\packages\\raylib-cs\\4.0.0.1\\raylib-cs.4.0.0.1.nupkg.sha512",
+    "C:\\Users\\RDCNY\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
