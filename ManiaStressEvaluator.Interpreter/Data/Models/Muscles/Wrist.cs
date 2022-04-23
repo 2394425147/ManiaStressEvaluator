@@ -26,7 +26,7 @@ public class Wrist : MuscleBase
     {
         Relax(notes);
 
-        if (MustRotate(notes)) Stress += 0.25f / (notes[0].Time - _lastNotes[0].Time);
+        if (MustRotate(notes)) Stress += 0.27f / (notes[0].Time - _lastNotes[0].Time);
 
         foreach (var note in notes) Fingers[_parentArm.Side < 1 ? note.Lane : note.Lane - 2].React(note);
 
@@ -35,7 +35,7 @@ public class Wrist : MuscleBase
 
     private void Relax(List<Note> notes)
     {
-        const float reliefMultiplier = 25f;
+        const float reliefMultiplier = 29f;
         Stress = MathF.Max(0,
             Stress - reliefMultiplier * MathF.Pow(notes[0].Time - LastHitTime, 1.5f));
     }

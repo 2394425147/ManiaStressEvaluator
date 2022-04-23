@@ -35,8 +35,8 @@ public class RealtimeEvaluator : IEvaluator
 
                 Console.ForegroundColor = averageStress switch
                 {
-                    > 5.3f => ConsoleColor.Red,
-                    > 3.3f => ConsoleColor.Yellow,
+                    > 5.6f => ConsoleColor.Red,
+                    > 3.5f => ConsoleColor.Yellow,
                     > 1.7f => ConsoleColor.White,
                     _ => ConsoleColor.Blue
                 };
@@ -50,7 +50,7 @@ public class RealtimeEvaluator : IEvaluator
                                   $"RST: {player.Arms[1].Wrist.Stress:0.0}\t" +
                                   $"FGR: {player.Arms[1].Wrist.Fingers[0].Stress:0.0}\t" +
                                   $"{player.Arms[1].Wrist.Fingers[1].Stress:0.0}\t||\t" +
-                                  $"FRM: {averageStress:0.00}*\tAVG: {totalStress / notesHit * 1.7f:0.000}*");
+                                  $"FRM: {averageStress:0.00}*\tAVG: {totalStress / notesHit * 1.53f:0.000}*");
 
                 noteCopy.Remove(noteCollection);
             }

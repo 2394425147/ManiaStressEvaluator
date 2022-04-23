@@ -4,7 +4,6 @@ namespace ManiaStressEvaluator.Interpreter.Data.Models.Muscles;
 
 public class Finger : MuscleBase
 {
-    private float _heldReleaseTime;
     private bool _lastNoteWasHeld;
 
     public void React(Note note)
@@ -16,11 +15,11 @@ public class Finger : MuscleBase
         if (_lastNoteWasHeld)
         {
             _lastNoteWasHeld = false;
-            multiplier *= 1 + Math.Max(0, 0.1f / (note.Time - _heldReleaseTime));
+            multiplier *= 1 + Math.Max(0, 0.04f / (note.Time - LastHitTime));
         }
 
         if (LastHitTime > 0)
-            Stress += multiplier * (0.07f / (note.Time - LastHitTime));
+            Stress += multiplier * (0.06f / (note.Time - LastHitTime));
         else
             Stress += multiplier * 0.012f;
 
@@ -29,7 +28,7 @@ public class Finger : MuscleBase
         if (!note.isHold || note.Length < 0.1f) return;
 
         _lastNoteWasHeld = true;
-        _heldReleaseTime = note.Time + note.Length;
+        LastHitTime = note.Time + note.Length;
     }
 
     private void Relax(Note note)

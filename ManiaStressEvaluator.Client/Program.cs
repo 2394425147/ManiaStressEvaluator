@@ -7,11 +7,21 @@ public static class Program
 {
     public static async Task Main(string?[] args)
     {
-        while (args.Length < 1)
+        if (args.Length < 1)
         {
-            Console.WriteLine("Please enter the path to the beatmap. (.osu)");
-            args = new[] { Console.ReadLine() };
+            var osuFile = new DirectoryInfo("./").GetFiles().FirstOrDefault(f => f.Extension == ".osu");
+            
+            if (osuFile != null)
+                args = new[] { osuFile.FullName };
+            else while (args.Length < 1)
+            {
+                Console.WriteLine("Please enter the path to the beatmap. (.osu)");
+                args = new[] { Console.ReadLine() };
+            }
         }
+        
+        Console.WriteLine("Press any key to start");
+        Console.ReadKey();
 
         var rawChart = await File.ReadAllTextAsync(args[0] ?? throw new InvalidOperationException());
         var chart = OsuManiaInterpreter.Parse(rawChart);

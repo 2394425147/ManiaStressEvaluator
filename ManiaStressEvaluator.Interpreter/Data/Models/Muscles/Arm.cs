@@ -24,7 +24,7 @@ public class Arm : MuscleBase
     {
         Relax(notes);
 
-        if (MustPerformJack(notes)) Stress += 0.5f / (notes[0].Time - _lastNotes[0].Time);
+        if (MustPerformJack(notes)) Stress += 0.55f / (notes[0].Time - _lastNotes[0].Time);
 
         Wrist.React(notes);
 
